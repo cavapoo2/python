@@ -46,6 +46,14 @@ class Heading(QLabel):
         heading_font = QFont(font, font_size, QFont.Black)
         heading_font.setStretch(QFont.ExtraExpanded)
         self.setFont(heading_font)
+        self.setStyleSheet("* { \
+                                    background: qradialgradient(cx: 0.3, cy: -0.4, fx: 0.3, fy: \
+                                    -0.4, radius: 1.35, stop: 0 #fff, stop: 1 #888); \
+                                    color: rgb(0, 0, 0); \
+                                    border: 1px solid #ffffff; \
+                                    }")
+
+
 
         # Display a simple raster image
         #logo = QPixmap('logo.png')
@@ -69,10 +77,17 @@ class SelectionItem(QWidget):
         layout = QVBoxLayout()
         self.upper = QRadioButton(name_upper)
         self.upper.setChecked(True)
+        self.upper.setStyleSheet("QRadioButton::checked { \
+                                background-color:lightgreen; \
+                                }")
         layout.addWidget(self.upper)
 
         self.lower = QRadioButton(name_lower)
         self.lower.setChecked(False)
+        self.lower.setStyleSheet("QRadioButton::checked { \
+                                        background-color:red; \
+                                        }")
+
         layout.addWidget(self.lower)
 
         self.setLayout(layout)
@@ -115,6 +130,14 @@ class MainWindow(QMainWindow):
         self.setWindowTitle('VIPU Stimulator    ')
         self.setFixedWidth(400)
         self.setFixedHeight(300)
+        '''
+        self.setStyleSheet("* { \
+                            background: qradialgradient(cx: 0.3, cy: -0.4, fx: 0.3, fy: \
+                            -0.4, radius: 1.35, stop: 0 #fff, stop: 1 #888); \
+                            color: rgb(0, 0, 0); \
+                            border: 1px solid #ffffff; \
+                            }")
+        '''
         form = QWidget()
         self.setCentralWidget(form)
         form.setLayout(QFormLayout())
