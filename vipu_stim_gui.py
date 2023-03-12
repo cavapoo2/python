@@ -2,7 +2,9 @@ import sys
 
 from PyQt5.QtCore import (
     Qt,
-    QLine
+    QLine,
+    QPropertyAnimation,
+    QSize
 )
 from PyQt5.QtWidgets import (
     QApplication,
@@ -22,13 +24,17 @@ from PyQt5.QtWidgets import (
     QSpinBox,
     QFrame,
     QSplitter,
-    QGraphicsLineItem
+    QGraphicsLineItem,
+
+
 )
 
 from PyQt5.QtGui import (
         QFont,
         QPen,
         QColor,
+        QPixmap,
+
 
 )
 
@@ -40,6 +46,22 @@ class Heading(QLabel):
         heading_font = QFont(font, font_size, QFont.Black)
         heading_font.setStretch(QFont.ExtraExpanded)
         self.setFont(heading_font)
+
+        # Display a simple raster image
+        #logo = QPixmap('logo.png')
+
+        #logo = logo.scaledToWidth(350, Qt.SmoothTransformation)
+        #heading.setPixmap(logo)
+        #self.setPixmap(logo)
+
+        # Simple property animation
+        #self.heading_animation = QPropertyAnimation(
+        #    self, b'maximumSize')
+        #self.heading_animation.setStartValue(QSize(10, logo.height()))
+        #self.heading_animation.setEndValue(QSize(350, logo.height()))
+        #self.heading_animation.setDuration(1000)
+        #self.heading_animation.start()
+
 
 class SelectionItem(QWidget):
     def __init__(self,name_upper,name_lower,handler):
@@ -91,6 +113,8 @@ class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         self.setWindowTitle('VIPU Stimulator    ')
+        self.setFixedWidth(400)
+        self.setFixedHeight(300)
         form = QWidget()
         self.setCentralWidget(form)
         form.setLayout(QFormLayout())
