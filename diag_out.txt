@@ -1,0 +1,100 @@
+Loading: http://trac/projects/random/ticket/8867
+
+================================================================================
+DIAGNOSTIC REPORT
+================================================================================
+
+1. Checking Trac Version:
+   Footer text: Powered by Trac 0.11.2.1
+        By Edgewall Software.
+      
+      Visit the Trac open source project athttp://trac.edgewall.org/
+
+2. Checking Main Ticket Container:
+   #ticket: 1 element(s)
+   #content: 1 element(s)
+   .ticket: 1 element(s)
+   div[id='ticket']: 1 element(s)
+
+3. Checking Properties/Fields:
+   #properties: 1 element(s)
+   #properties table: 1 element(s)
+   #properties table.properties: 0 element(s)
+   .properties: 1 element(s)
+   table.properties: 1 element(s)
+
+4. Checking Description Area:
+   #ticket .description: 1 element(s) - Preview: 
+              
+                Description
+               ¶
+              
+                
+       ...
+   .description: 1 element(s) - Preview: 
+              
+                Description
+               ¶
+              
+                
+       ...
+   #ticket .description .searchable: 1 element(s) - Preview: 
+                
+emn file has been read in. Use board file LDUK1234_FOR_ECR456-410.brd in fo...
+   .description .searchable: 1 element(s) - Preview: 
+                
+emn file has been read in. Use board file LDUK1235_FOR_ECR0879-410.brd in fo...
+   div.description: 1 element(s) - Preview: 
+              
+                Description
+               ¶
+              
+                
+       ...
+
+5. Checking Changelog/Comments:
+   #changelog: 1 element(s)
+   #changelog .change: 10 element(s)
+   .change: 10 element(s)
+   #changelog div.change: 5 element(s)
+   div.change: 5 element(s)
+   #changelog h3: 5 element(s)
+   div[id='changelog']: 1 element(s)
+
+   Changelog HTML Structure:
+   Direct children count: 5
+     Child 0: <form class='printableform'>
+     Child 1: <form class='printableform'>
+     Child 2: <form class='printableform'>
+     Child 3: <form class='printableform'>
+     Child 4: <form class='printableform'>
+
+6. Checking Attachments:
+   #attachments: 1 element(s)
+   #attachments dt: 2 element(s)
+   #attachments dt a: 4 element(s)
+   dl#attachments: 0 element(s)
+   .attachments: 1 element(s)
+
+7. Saving Page HTML:
+   Saved to: trac_page_debug.html
+
+8. Taking Screenshot:
+   Saved to: trac_page_debug.png
+
+9. Looking for Comment Patterns:
+   Change headers (h3.change): 5 element(s)
+   Comment divs (div.comment): 5 element(s)
+   Timeline links (a.timeline): 9 element(s)
+   Changes class (.changes): 5 element(s)
+   Divs with 'change' in class (div[class*='change']): 5 element(s)
+
+================================================================================
+DIAGNOSIS COMPLETE
+================================================================================
+
+Review the saved files:
+  - trac_page_debug.html (full page source)
+  - trac_page_debug.png (screenshot)
+
+Press Enter to close browser...
